@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>AuditCode</th>
+            <th>Description</th>
+            <th>AuditingFirm</th>
+            <th>ClientFirm</th>
+            <th>AuditReleaseDate </th>
+            <th>Document</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let audit of audits">
+            <td>{{ audit.AuditCode}}</td>
+            <td> {{ audit.Description}}</td>
+            <td>{{ audit.AuditorFirm}}</td>
+            <td>{{audit.ClientFirm}}</td>
+            <td>{{audit.ReleaseDate}}</td>
+            <td>
+                <a [routerLink]="" (click)="download(audit.Document)" >{{audit.Document}}</a>
+            </td>
+            
+            
+        </tr>
+        
+    </tbody>
+    </table>
+    
